@@ -4,4 +4,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/Rstaurant/",
   plugins: [react()],
+  base: '/Rstaurant/',  // ضع هنا اسم مستودعك بالضبط
 })

@@ -7,10 +7,10 @@ import StoreContextProvider from './context/StoreContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <StoreContextProvider>
         <App />
       </StoreContextProvider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 )

@@ -1,0 +1,116 @@
+.navpar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.navpar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 18px;
+    color: #49557e;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li,
+.navbar-menu a {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover,
+.navbar-menu li:hover {
+    color: tomato;
+}
+
+.navbar-menu .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid tomato;
+    color: tomato;
+}
+
+.navpar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navpar-right button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.navpar-right button:hover {
+    background-color: #fff4f2;
+}
+.navpar-search-icon{
+    position: relative;
+}
+.navpar-search-icon .dot{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 10px;
+    height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+}
+@media  (max-width: 1050px) {
+    .navpar-logo{
+        width: 140px;
+    }
+    .navbar-menu {
+        font-size: 17px;
+        gap: 20px;
+    }
+    .navpar-right {
+        gap: 30px;
+    }
+    .navpar-right img{
+        width: 22px;
+    }
+    .navpar-right button{
+        padding: 8px 25px;
+    }
+
+}
+@media  (max-width: 900px) {
+    .navpar-logo{
+        width: 120px;
+    }
+    .navbar-menu {
+        font-size: 15px;
+        gap: 20px;
+    }
+    .navpar-right {
+        gap: 20px;
+    }
+    .navpar-right img{
+        width: 20px;
+    }
+    .navpar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+
+}
+@media  (max-width: 750px) {
+    .navbar-menu{
+        display: none;
+    }
+}

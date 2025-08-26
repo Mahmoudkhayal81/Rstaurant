@@ -1,0 +1,106 @@
+/* الحاوية الرئيسية */
+.place-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* القسم الأيسر: معلومات التوصيل */
+.place-order-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.place-order-left .title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* حقول متعددة بجانب بعض */
+.multi-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.place-order-left input {
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  font-size: 16px;
+}
+
+/* القسم الأيمن: ملخص العربة */
+.place-order-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-total {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart-total h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.cart-total-details.total p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cart-total hr {
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* زر الدفع */
+.place-order-right button {
+  padding: 12px 20px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.place-order-right button:hover {
+  background-color: #e5533d;
+}
+
+/* استايل متجاوب للشاشات الصغيرة */
+@media (max-width: 750px) {
+  .place-order {
+    flex-direction: column;
+  }
+
+  .multi-fields {
+    flex-direction: column;
+  }
+}

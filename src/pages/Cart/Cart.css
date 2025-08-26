@@ -1,0 +1,207 @@
+/* === الحاوية الرئيسية === */
+.cart {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* === جدول العربة مع تمكين التمرير الأفقي === */
+.cart-items {
+  display: block; /* استخدم block للسماح بالتمرير */
+  overflow-x: auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+/* محتوى الجدول */
+.cart-items-title,
+.cart-items-item {
+  display: grid;
+  grid-template-columns: 80px 2fr 1fr 1fr 1fr 120px;
+  align-items: center;
+  min-width: 700px; /* يجعل الجدول مرن على الشاشات الصغيرة */
+  gap: 10px;
+}
+
+.cart-items-title {
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 2px solid #eee;
+}
+
+.cart-items-item {
+  padding: 10px 0;
+  transition: background 0.3s ease;
+}
+
+.cart-items-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* صورة المنتج */
+.cart-items-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* زر Remove */
+.cart-items-item button {
+  padding: 6px 10px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-items-item button:hover {
+  background-color: #d9363e;
+}
+
+/* فصل الصفوف */
+.cart-items-item + hr {
+  border: 0;
+  height: 1px;
+  background-color: #eee;
+}
+
+/* رسالة العربة الفارغة */
+.empty-cart {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+/* صندوق ملخص المجموع الكلي */
+.cart-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cart-total {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.cart-total h2 {
+  margin-bottom: 15px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.cart-total-details.total p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cart-total hr {
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* زر Checkout */
+.cart-button > button {
+  padding: 12px 20px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button > button:hover {
+  background-color: #e5533d;
+}
+
+/* قسم Promo Code */
+.cart-promocode {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.cart-promocode p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.cart-promocode-input {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.cart-promocode-input button {
+  padding: 12px 5px;
+  width: auto;
+  min-width: 100px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+  background-color: #333;
+}
+
+/* === Responsive Design: تحسين ظهور الجدول على الشاشات الصغيرة === */
+@media (max-width: 750px) {
+  .cart-items {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cart-items {
+    padding: 5px;
+  }
+
+  .cart-promocode-input {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cart-promocode-input input,
+  .cart-promocode-input button {
+    width: 90%;
+    max-width: 300px;
+    min-width: 200px;
+  }
+}
